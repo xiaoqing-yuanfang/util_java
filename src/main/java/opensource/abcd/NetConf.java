@@ -48,28 +48,9 @@ public class NetConf {
 	}
 	
 	public static void main(String[] args){
-        String rpc = "<rpc message-id=\"101\">"+
-                "  <get-config> "+
-                "    <source> "+
-                "      <running/> "+
-                "    </source>  "+
-                "    <filter> "+
-                "      <configuration> "+
-                "        <users> "+
-                "          <user-realms> "+
-                "            <realm> "+
-                "              <name>chuantong</name>  "+
-                "              <role-mapping-rules> "+
-                "                <rule/> "+
-                "              </role-mapping-rules> "+
-                "            </realm> "+
-                "          </user-realms> "+
-                "        </users> "+
-                "      </configuration> "+
-                "    </filter> "+
-                "  </get-config> "+
+        String rpc = "<rpc message-id=\"101\">"+ "*" +
                 "</rpc>";
-		Device d = NetConf.connect("10.1.13.13",22,"test06","abc123");
+		Device d = NetConf.connect("*",22,"*","*");
 		if(d != null){
 			XML res = executeRpc(d, rpc);
 			logger.info(res.toString());
