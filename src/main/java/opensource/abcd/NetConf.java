@@ -48,7 +48,7 @@ public class NetConf {
 	}
 	
 	public static void main(String[] args){
-        String rpc = "<rpc message-id=\"101\">"+ "*" +
+        String rpc = "<rpc message-id=\"1\">"+ "*" +
                 "</rpc>";
 		Device d = NetConf.connect("*",22,"*","*");
 		if(d != null){
